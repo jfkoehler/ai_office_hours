@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to Statistics &#8212; Introduction to Statistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/togglebutton.js"></script>
+    <script type="text/javascript" src="_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <script type="text/javascript" src="_static/mystnb.js"></script>
+    <script type="text/javascript" src="_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/javascript">
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" type="text/javascript" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to Data" href="d1.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/hennessy.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Introduction to Statistics</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="#">
+   Introduction to Statistics
+  </a>
+ </li>
+</ul>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="d1.html">
+   Introduction to Data
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/syllabus.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/jfkoehler/statsbook/blob/master/syllabus.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> On this page
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-description">
+   Course Description
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-outcomes">
+   Learning Outcomes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-grade">
+   Final Grade
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#materials">
+   Materials
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-schedule">
+     Course Schedule:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#policies">
+     Policies
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduction-to-statistics">
+<h1>Introduction to Statistics<a class="headerlink" href="#introduction-to-statistics" title="Permalink to this headline">¶</a></h1>
+<p><strong>LMTH 2030B</strong>: Statistics with SPSS</p>
+<p><em>Jacob Koehler</em>: koehlerj&#64;newschool.edu</p>
+<p><em>Office Hours</em>: By Appointment</p>
+<div class="section" id="course-description">
+<h2>Course Description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h2>
+<p>This course is an introduction to statistics using the software package SPSS. Emphasis is on exploring quantitative data and applying concepts to a range of situations. Topics include descriptive statistics, basic probability, normal distributions, correlation, linear regression, and hypothesis tests. The course combines lectures, discussions, and computer assignments. Several class sessions are held at a computer lab to learn specific software skills. Students are expected to go to the lab on a regular basis to complete homework assignments and explore the functionality of SPSS. This course is offered every semester and fulfills the second math requirement for the Interdisciplinary Science major and is a Requirement for the Environmental Studies and Psychology Majors.</p>
+</div>
+<div class="section" id="learning-outcomes">
+<h2>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
+<p>By successful completion of this course, students will be able to:</p>
+<ol class="simple">
+<li><p>Select methods for collecting and/or analyzing data for statistical inference.</p></li>
+<li><p>Describe patterns, trends, associations, and relationships in data</p></li>
+<li><p>Explore random phenomena.</p></li>
+<li><p>Develop an explanation or justify a conclusion using evidence from data, definitions, or statistical inference.</p></li>
+</ol>
+</div>
+<div class="section" id="final-grade">
+<h2>Final Grade<a class="headerlink" href="#final-grade" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Weekly Homework Sets 20%</p></li>
+<li><p>Weekly Group Lab 20%</p></li>
+<li><p>Final Project 20%</p></li>
+<li><p>Weekly Quiz 20%</p></li>
+<li><p>Participation/Attendance 20%</p></li>
+</ol>
+</div>
+<div class="section" id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><em>Textbook</em>: Moore et al., <em>Introduction to the Practice of Statistics: 9th Edition</em></p></li>
+<li><p><em>Technology</em>: A working laptop that you have administrative rights on to install programs and manipulate files.  We will use the following for software:</p></li>
+<li><p><em>Google Sheets</em>: Available through your New School Email</p></li>
+<li><p><em>IBM SPSS</em>: Available through <a class="reference external" href="https://it.newschool.edu/services/learning-resources/apps-anywhere">Apps Anywhere</a></p></li>
+<li><p><em>Jupyter Notebooks</em>: Freely downloadable through <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda</a>. Please see the following videos for assistance downloading and installing:</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA"><strong>Windows</strong></a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=TcSAln46u9U"><strong>Mac</strong></a></p></li>
+</ul>
+<div class="section" id="course-schedule">
+<h3>Course Schedule:<a class="headerlink" href="#course-schedule" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Week/Class/Session</p></th>
+<th class="head"><p>Date/ Date Range</p></th>
+<th class="head"><p>Topic or Activity</p></th>
+<th class="head"><p>Assignment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>w1d1</p></td>
+<td><p>8.31.20</p></td>
+<td><p>Introduction to class, Loading and accessing data, data types</p></td>
+<td><p>Setup</p></td>
+</tr>
+<tr class="row-odd"><td><p>w1d2</p></td>
+<td><p>9.2.20</p></td>
+<td><p>Describing Data, Center and Spread</p></td>
+<td><p>Homework 1</p></td>
+</tr>
+<tr class="row-even"><td><p>w2d1</p></td>
+<td><p>9.7.20</p></td>
+<td><p>no class</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w2d2</p></td>
+<td><p>9.9.20</p></td>
+<td><p>Data Visualization I</p></td>
+<td><p>Homework 2</p></td>
+</tr>
+<tr class="row-even"><td><p>w3d3</p></td>
+<td><p>9.14.20</p></td>
+<td><p>Normal Distributions</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w3d2</p></td>
+<td><p>9.16.20</p></td>
+<td><p>tbd</p></td>
+<td><p>tbd</p></td>
+</tr>
+<tr class="row-even"><td><p>w4d1</p></td>
+<td><p>9.21.20</p></td>
+<td><p>Bivariate Data: Categorical, Quantitative</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w4d2</p></td>
+<td><p>9.23.20</p></td>
+<td><p>Correlation</p></td>
+<td><p>Homework 3</p></td>
+</tr>
+<tr class="row-even"><td><p>w5d1</p></td>
+<td><p>9.28.20</p></td>
+<td><p>No Class</p></td>
+<td><p>No Class</p></td>
+</tr>
+<tr class="row-odd"><td><p>w5d2</p></td>
+<td><p>9.30.20</p></td>
+<td><p>Linear Regression</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-even"><td><p>w6d1</p></td>
+<td><p>10.5.20</p></td>
+<td><p>non-Linear Models</p></td>
+<td><p>Homework 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>w6d2</p></td>
+<td><p>10.7.20</p></td>
+<td><p>Regression Lab</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-even"><td><p>w7d1</p></td>
+<td><p>10.12.20</p></td>
+<td><p>Experimental Design</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w7d2</p></td>
+<td><p>10.14.20</p></td>
+<td><p>Sampling</p></td>
+<td><p>Homework 5</p></td>
+</tr>
+<tr class="row-even"><td><p>w8d1</p></td>
+<td><p>10.19.20</p></td>
+<td><p>Inference and Experiments</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w8d2</p></td>
+<td><p>10.21.20</p></td>
+<td><p>Collecting Data lab</p></td>
+<td><p>Homework 6</p></td>
+</tr>
+<tr class="row-even"><td><p>w9d1</p></td>
+<td><p>10.26.20</p></td>
+<td><p>Introduction to Probability</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w9d2</p></td>
+<td><p>10.28.20</p></td>
+<td><p>Conditional Probability</p></td>
+<td><p>Homework 7</p></td>
+</tr>
+<tr class="row-even"><td><p>w10d1</p></td>
+<td><p>11.2.20</p></td>
+<td><p>Binomial Distributions</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w10d2</p></td>
+<td><p>11.4.20</p></td>
+<td><p>Geometric and Poisson Distributions</p></td>
+<td><p>Homework 8</p></td>
+</tr>
+<tr class="row-even"><td><p>w11d1</p></td>
+<td><p>11.9.20</p></td>
+<td><p>Central Limit Theorem, distributions for sample proportions and differences in sample proportions</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w11d2</p></td>
+<td><p>11.11.20</p></td>
+<td><p>Confidence Intervals and Means</p></td>
+<td><p>Homework 9</p></td>
+</tr>
+<tr class="row-even"><td><p>w12d1</p></td>
+<td><p>11.16.20</p></td>
+<td><p>Chi-Square Goodness of Fit</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w12d2</p></td>
+<td><p>11.18.20</p></td>
+<td><p>Confidence Interval and Regression</p></td>
+<td><p>Homework 10</p></td>
+</tr>
+<tr class="row-even"><td><p>w13d1</p></td>
+<td><p>11.23.20</p></td>
+<td><p>Regression and Inference</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w13d2</p></td>
+<td><p>11.25.20</p></td>
+<td><p>no class</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-even"><td><p>w14d1</p></td>
+<td><p>11.30.20</p></td>
+<td><p>Logistic Regression and Classification</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w14d2</p></td>
+<td><p>12.2.20</p></td>
+<td><p>API Workshop</p></td>
+<td><p>Homework 11</p></td>
+</tr>
+<tr class="row-even"><td><p>w15d1</p></td>
+<td><p>12.7.20</p></td>
+<td><p>Final Project Workshop I</p></td>
+<td><p>na</p></td>
+</tr>
+<tr class="row-odd"><td><p>w15d2</p></td>
+<td><p>12.9.20</p></td>
+<td><p>Final Project Workshop II</p></td>
+<td><p>na</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="policies">
+<h3>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">¶</a></h3>
+<p><em>Academic Integrity</em></p>
+<p>Compromising your academic integrity may lead to serious consequences, including (but not limited to) one or more of the following: failure of the assignment, failure of the course, academic warning, disciplinary probation, suspension from the university, or dismissal from the university.</p>
+<p>Students are responsible for understanding the University’s policy on academic honesty and integrity and must make use of proper citations of sources for writing papers, creating, presenting, and performing their work, taking examinations, and doing research. It is the responsibility of students to learn the procedures specific to their discipline for correctly and appropriately differentiating their own work from that of others. The full text of the policy, including adjudication procedures, is found at http://www.newschool.edu/policies/</p>
+<p><em>Participation/ Attendance/ Expectations for the Remote Learning Environment</em></p>
+<p>Participation is an essential part of class and includes: keeping up with reading, contributing meaningfully to class discussions, active participation in group work, and attending synchronous sessions regularly and on time. Students are expected to keep up with class activities and requirements each week.</p>
+<p><em>Student Course Ratings (Course Evaluations)</em></p>
+<p>During the last two weeks of the semester, students are asked to provide feedback for each of their courses through an online survey. They cannot view grades until providing feedback or officially declining to do so. Course evaluations are a vital space where students can speak about the learning experience. It is an important process which provides valuable data about the successful delivery and support of a course or topic to both the faculty and administrators. Instructors rely on course rating surveys for feedback on the course and teaching methods, so they can understand what aspects of the class are most successful in teaching students, and what aspects might be improved or changed in future. Without this information, it can be difficult for an instructor to reflect upon and improve teaching methods and course design. In addition, program/department chairs and other administrators review course surveys. Instructions are available online at http://www.newschool.edu/provost/course-evaluations-student-instructions.pdf.</p>
+<p><em>Resources</em></p>
+<p>The university provides many resources to help students achieve academic and artistic excellence. These resources include:</p>
+<ul class="simple">
+<li><p>University Libraries and Archives: http://library.newschool.edu (See also Reserves)</p></li>
+<li><p>University Learning Center: http://www.newschool.edu/learning-center</p></li>
+<li><p>Student Disability Services: www.newschool.edu/student-disability-services/</p></li>
+</ul>
+<p>If you are a student with a disability/disabled student, or believe you might have a disability that requires accommodations, please contact the Student Disability Services (SDS) at studentdisability&#64;newschool.edu, or 212-229-5626, to coordinate all reasonable accommodation requests.</p>
+<p>The New School Food Assistance: For more information on food assistance and additional resources, please click on the link below: https://www.newschool.edu/student-support-crisis-management/student-food-pantry-faq/</p>
+<p>Health and Wellness: For information about services and support available to New School students please click on the link below: https://www.newschool.edu/campus-community/health-wellness-support/</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='right-next' id="next-link" href="d1.html" title="next page">Introduction to Data</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Jacob Frias Koehler, PhD<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="_static/js/index.js"></script>
+    
+  </body>
+</html>
